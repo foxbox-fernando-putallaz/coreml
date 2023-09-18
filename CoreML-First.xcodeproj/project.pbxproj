@@ -14,6 +14,7 @@
 		766C5CEF2AB8CEB0006EDAE5 /* CoreML_FirstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766C5CEE2AB8CEB0006EDAE5 /* CoreML_FirstTests.swift */; };
 		766C5CF92AB8CEB0006EDAE5 /* CoreML_FirstUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766C5CF82AB8CEB0006EDAE5 /* CoreML_FirstUITests.swift */; };
 		766C5CFB2AB8CEB0006EDAE5 /* CoreML_FirstUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766C5CFA2AB8CEB0006EDAE5 /* CoreML_FirstUITestsLaunchTests.swift */; };
+		766C5D092AB8D194006EDAE5 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 766C5D082AB8D194006EDAE5 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		766C5CF42AB8CEB0006EDAE5 /* CoreML-FirstUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreML-FirstUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		766C5CF82AB8CEB0006EDAE5 /* CoreML_FirstUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreML_FirstUITests.swift; sourceTree = "<group>"; };
 		766C5CFA2AB8CEB0006EDAE5 /* CoreML_FirstUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreML_FirstUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		766C5D082AB8D194006EDAE5 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		766C5CDC2AB8CEB0006EDAE5 /* CoreML-First */ = {
 			isa = PBXGroup;
 			children = (
+				766C5D072AB8D173006EDAE5 /* CoreML-Model */,
 				766C5CDD2AB8CEB0006EDAE5 /* CoreML_FirstApp.swift */,
 				766C5CDF2AB8CEB0006EDAE5 /* ContentView.swift */,
 				766C5CE12AB8CEB0006EDAE5 /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				766C5CFA2AB8CEB0006EDAE5 /* CoreML_FirstUITestsLaunchTests.swift */,
 			);
 			path = "CoreML-FirstUITests";
+			sourceTree = "<group>";
+		};
+		766C5D072AB8D173006EDAE5 /* CoreML-Model */ = {
+			isa = PBXGroup;
+			children = (
+				766C5D082AB8D194006EDAE5 /* Resnet50.mlmodel */,
+			);
+			path = "CoreML-Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				766C5CE02AB8CEB0006EDAE5 /* ContentView.swift in Sources */,
+				766C5D092AB8D194006EDAE5 /* Resnet50.mlmodel in Sources */,
 				766C5CDE2AB8CEB0006EDAE5 /* CoreML_FirstApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +442,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +472,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
