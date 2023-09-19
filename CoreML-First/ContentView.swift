@@ -13,11 +13,17 @@ struct ContentView: View {
     @State var selectedImages: [PhotosPickerItem] = []
     @State var data: Data?
     @State var imageSelected = false
+    @State var imageDescription: String = ""
+    @State var accuracyConfidence: String = ""
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack {
+                    Text(imageDescription)
+                        .padding()
+                        .font(.title2)
+                    
                     if let data, let uiImage = UIImage(data: data) {
                         Image(uiImage: uiImage)
                             .resizable()
@@ -27,15 +33,15 @@ struct ContentView: View {
                             .shadow(radius: 10)
                             .padding()
                     }
+                    
+                    Text(accuracyConfidence)
+                        .padding()
+                        .font(.caption)
                 }
                 .navigationTitle(imageSelected ? "Your Image" : "Select an image")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        PhotosPicker(
-                            selection: $selectedImages,
-                            maxSelectionCount: 1,
-                            matching: .images
-                        ) {
+                        PhotosPicker(selection: $selectedImages, maxSelectionCount: 1, matching: .images) {
                             Image(systemName: "photo.badge.plus")
                         }
                     }
@@ -72,12 +78,10 @@ struct ContentView: View {
         detectImage(ciImage)
     }
     
-    
     //MARK: - Probably old way of doing things :eyes:
     
     func detectImage(_ ciImage: CIImage) {
-        guard
-            let model = try? VNCoreMLModel(for: Resnet50(configuration: .init()).model) else {
+        guard let model = try? VNCoreMLModel(for: Resnet50(configuration: .init()).model) else {
             return
         }
         
@@ -86,8 +90,12 @@ struct ContentView: View {
                 print("error loading the results")
                 return
             }
+            let firstResult = results.first
             
-            print(results)
+            if let description = firstResult?.identifier, let confidence = firstResult?.confidence {
+                imageDescription = description
+                accuracyConfidence = "Accuracy confidence = \(confidence)"
+            }
         }
         
         let handler = VNImageRequestHandler(ciImage: ciImage)
