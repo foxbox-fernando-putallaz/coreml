@@ -38,7 +38,7 @@ struct ContentView: View {
                         }
                     }
                 }
-                .onChange(of: selectedImages) { newValue in
+                .onChange(of: selectedImages) {
                     guard let item = selectedImages.first else {
                         return
                     }
