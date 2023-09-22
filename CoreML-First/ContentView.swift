@@ -15,12 +15,19 @@ struct ContentView: View {
     @State var imageSelected = false
     @State var imageDescription: String = ""
     @State var accuracyConfidence: String = ""
+    @State var isShowingAlert = false
+    @State var alertTitle = ""
     
     var body: some View {
         NavigationStack {
             VStack {
                 if let data, let uiImage = UIImage(data: data) {
                     ImageCard(image: uiImage, title: imageDescription, accuracy: accuracyConfidence)
+                        .alert(alertTitle, isPresented: $isShowingAlert) {
+                            Button("Ok", role: .cancel) { }
+                        } message: {
+                            Text("Please pick another image")
+                        }
                 }
             }
             .frame(maxHeight: 300)
@@ -72,7 +79,8 @@ struct ContentView: View {
         
         let request = VNCoreMLRequest(model: model) { request, error in
             guard let results = request.results as? [VNClassificationObservation] else {
-                print("error loading the results")
+                isShowingAlert = true
+                alertTitle = "error loading the results"
                 return
             }
             let firstResult = results.first
