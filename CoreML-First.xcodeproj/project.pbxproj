@@ -17,6 +17,7 @@
 		766C5CFB2AB8CEB0006EDAE5 /* CoreML_FirstUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766C5CFA2AB8CEB0006EDAE5 /* CoreML_FirstUITestsLaunchTests.swift */; };
 		766C5D092AB8D194006EDAE5 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 766C5D082AB8D194006EDAE5 /* Resnet50.mlmodel */; };
 		76B76AA32AC1ACFA00312A53 /* ImageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B76AA22AC1ACFA00312A53 /* ImageCard.swift */; };
+		76ECE5FB2AC1EB57002FE763 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECE5FA2AC1EB57002FE763 /* CaptureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		766C5CFA2AB8CEB0006EDAE5 /* CoreML_FirstUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreML_FirstUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		766C5D082AB8D194006EDAE5 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		76B76AA22AC1ACFA00312A53 /* ImageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCard.swift; sourceTree = "<group>"; };
+		76ECE5FA2AC1EB57002FE763 /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				766C5D072AB8D173006EDAE5 /* CoreML-Model */,
 				766C5CDD2AB8CEB0006EDAE5 /* CoreML_FirstApp.swift */,
+				76ECE5FA2AC1EB57002FE763 /* CaptureView.swift */,
 				766C5CDF2AB8CEB0006EDAE5 /* ContentView.swift */,
 				76B76AA22AC1ACFA00312A53 /* ImageCard.swift */,
 				766C5CE12AB8CEB0006EDAE5 /* Assets.xcassets */,
@@ -279,6 +282,7 @@
 				766C5D092AB8D194006EDAE5 /* Resnet50.mlmodel in Sources */,
 				766C5CDE2AB8CEB0006EDAE5 /* CoreML_FirstApp.swift in Sources */,
 				76B76AA32AC1ACFA00312A53 /* ImageCard.swift in Sources */,
+				76ECE5FB2AC1EB57002FE763 /* CaptureView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

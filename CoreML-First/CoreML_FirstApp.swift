@@ -11,7 +11,17 @@ import SwiftUI
 struct CoreML_FirstApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                ContentView()
+                    .tabItem {
+                        Image( systemName: "photo.fill")
+                    }
+                
+                CaptureView()
+                    .tabItem {
+                        Image(systemName: "camera.shutter.button")
+                    }
+            }
         }
     }
 }
