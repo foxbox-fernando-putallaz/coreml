@@ -104,10 +104,12 @@ struct ContentView: View {
 
 #Preview {
     NavigationStack {
-        VStack(spacing: 32.0) {
-            ImageCard(image: UIImage(named: "taylor2")!, title: "Evening Dance, when probable is Taylor Swift and this is not being accurate at all.", accuracy: "0.49591")
-            ImageCard(image: UIImage(named: "mustang1")!, title: "Sports Car, Sport Car, Super Sport Car", accuracy: "0.49591")
-            ImageCard(image: UIImage(named: "mustang1")!, title: "Sports Car, Sport Car, Super Sport Car", accuracy: "0.49591")
+        ScrollView {
+            VStack(spacing: 32.0) {
+                ImageCard(image: UIImage(named: "taylor2")!, title: "Evening Dance, when probable is Taylor Swift and this is not being accurate at all.", accuracy: "0.49591")
+                ImageCard(image: UIImage(named: "mustang1")!, title: "Sports Car, Sport Car, Super Sport Car", accuracy: "0.49591")
+                ImageCard(image: UIImage(named: "taylor1")!, title: "Taylor Swift again, but the model spot something else, Car, Super Sport Car", accuracy: "0.49591")
+            }
         }
     }
 }
