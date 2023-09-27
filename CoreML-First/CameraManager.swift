@@ -48,7 +48,7 @@ class CameraManager: NSObject, ObservableObject {
         let videoOutput = AVCaptureVideoDataOutput()
         
         guard permissionGranted else { return }
-        guard let videoDevice = AVCaptureDevice.default(.builtInDualCamera, for: .video, position: .back) else { return }
+        guard let videoDevice = AVCaptureDevice.default(.builtInUltraWideCamera, for: .video, position: .back) else { return }
         guard let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice) else { return }
         guard captureSession.canAddInput(videoDeviceInput) else { return }
         
@@ -71,12 +71,10 @@ extension CameraManager: AVCaptureVideoDataOutputSampleBufferDelegate {
     
     private func imageFromSampleBuffer(sampleBuffer: CMSampleBuffer) -> CGImage? {
         guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return nil }
-        
         let ciImage = CIImage(cvPixelBuffer: imageBuffer)
-         guard let cgImage = context.createCGImage(ciImage, from: ciImage.extent) else { return nil }
-        
+    
+        guard let cgImage = context.createCGImage(ciImage, from: ciImage.extent) else { return nil }
         return cgImage
-        
     }
 }
 

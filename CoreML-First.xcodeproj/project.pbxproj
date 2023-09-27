@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		764EF6412ABA41ED00A0E8CB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 764EF6402ABA41ED00A0E8CB /* README.md */; };
 		766C5CDE2AB8CEB0006EDAE5 /* CoreML_FirstApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766C5CDD2AB8CEB0006EDAE5 /* CoreML_FirstApp.swift */; };
-		766C5CE02AB8CEB0006EDAE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766C5CDF2AB8CEB0006EDAE5 /* ContentView.swift */; };
+		766C5CE02AB8CEB0006EDAE5 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766C5CDF2AB8CEB0006EDAE5 /* PictureView.swift */; };
 		766C5CE22AB8CEB0006EDAE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766C5CE12AB8CEB0006EDAE5 /* Assets.xcassets */; };
 		766C5CE52AB8CEB0006EDAE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766C5CE42AB8CEB0006EDAE5 /* Preview Assets.xcassets */; };
 		766C5CEF2AB8CEB0006EDAE5 /* CoreML_FirstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766C5CEE2AB8CEB0006EDAE5 /* CoreML_FirstTests.swift */; };
@@ -42,7 +42,7 @@
 		764EF6402ABA41ED00A0E8CB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		766C5CDA2AB8CEB0006EDAE5 /* CoreML-First.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreML-First.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		766C5CDD2AB8CEB0006EDAE5 /* CoreML_FirstApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreML_FirstApp.swift; sourceTree = "<group>"; };
-		766C5CDF2AB8CEB0006EDAE5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		766C5CDF2AB8CEB0006EDAE5 /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
 		766C5CE12AB8CEB0006EDAE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		766C5CE42AB8CEB0006EDAE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		766C5CEA2AB8CEB0006EDAE5 /* CoreML-FirstTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoreML-FirstTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +108,7 @@
 				766C5D072AB8D173006EDAE5 /* CoreML-Model */,
 				766C5CDD2AB8CEB0006EDAE5 /* CoreML_FirstApp.swift */,
 				76ECE5FA2AC1EB57002FE763 /* CaptureView.swift */,
-				766C5CDF2AB8CEB0006EDAE5 /* ContentView.swift */,
+				766C5CDF2AB8CEB0006EDAE5 /* PictureView.swift */,
 				76ECE5FC2AC23A4F002FE763 /* CameraManager.swift */,
 				76B76AA22AC1ACFA00312A53 /* ImageCard.swift */,
 				766C5CE12AB8CEB0006EDAE5 /* Assets.xcassets */,
@@ -281,7 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				766C5CE02AB8CEB0006EDAE5 /* ContentView.swift in Sources */,
+				766C5CE02AB8CEB0006EDAE5 /* PictureView.swift in Sources */,
 				766C5D092AB8D194006EDAE5 /* Resnet50.mlmodel in Sources */,
 				766C5CDE2AB8CEB0006EDAE5 /* CoreML_FirstApp.swift in Sources */,
 				76B76AA32AC1ACFA00312A53 /* ImageCard.swift in Sources */,

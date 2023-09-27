@@ -12,7 +12,7 @@ struct CoreML_FirstApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                ContentView()
+                PictureView()
                     .tabItem {
                         Image( systemName: "photo.fill")
                     }

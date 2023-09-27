@@ -9,7 +9,7 @@ import PhotosUI
 import SwiftUI
 import Vision
 
-struct ContentView: View {
+struct PictureView: View {
     @State var selectedImages: [PhotosPickerItem] = []
     @State var data: Data?
     @State var imageSelected = false
